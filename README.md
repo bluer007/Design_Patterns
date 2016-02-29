@@ -1,2 +1,2 @@
-# Design_Mode
-This is the  practice about design mode .
+# Design_Patterns
+This is the  practice about Design Patterns.
