@@ -68,7 +68,7 @@ private:
 };
 
 
-void test()
+void test_ZhuangShiQi()
 {
 	cout << "----×°ÊÎÆ÷Ä£Ê½----" << endl;
 	Component* component = new Zhuji();
