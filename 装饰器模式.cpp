@@ -74,7 +74,7 @@ namespace zsq
 
 	void test_zsq()
 	{
-		cout << "----装饰器模式----" << endl;
+		cout << "\n----装饰器模式----" << endl;
 		Component* component = new Zhuji();
 		component->use();
 

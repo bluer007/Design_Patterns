@@ -8,33 +8,51 @@ using namespace std;
 
 namespace cxgc
 {
-
-
-	class IProduct
+	class IProductA
 	{
 	public:
-		virtual ~IProduct() = 0;	//声明为纯虚函数
+		virtual ~IProductA() = 0;	//声明为纯虚函数
 		virtual void UseProduct() = 0;
 	};
-	IProduct::~IProduct() { cout << "~IProduct()\n"; };		//必须写函数体才能编译
+	IProductA::~IProductA() { cout << "~IProductA()\n"; };		//必须写函数体才能编译
+
+	class IProductB
+	{
+	public:
+		virtual ~IProductB() = 0;	//声明为纯虚函数
+		virtual void UseProduct() = 0;
+	};
+	IProductB::~IProductB() { cout << "~IProductB()\n"; };		//必须写函数体才能编译
 
 	class IFactory
 	{
 	public:
-		virtual IProduct* CreateProduct() = 0;
+		virtual IProductA* CreateProductA() = 0;
+		virtual IProductB* CreateProductB() = 0;
 		virtual ~IFactory() { cout << "~IFactory()\n"; };
 	};
 
-	class Shoe : public IProduct
+	class ShoeA : public IProductA
 	{
 	public:
-		Shoe() { cout << "Shoe()" << endl; };
-		virtual ~Shoe() { cout << "~Shoe()" << endl; };
+		ShoeA() { cout << "ShoeA()" << endl; };
+		virtual ~ShoeA() { cout << "~ShoeA()" << endl; };
 		virtual void UseProduct()
 		{
-			cout << "i am shoe -- product." << endl;
+			cout << "i am shoe A ----- product." << endl;
 		};
 
+	};
+
+	class ShoeB : public IProductB
+	{
+	public:
+		ShoeB() { cout << "ShoeB()" << endl; };
+		virtual ~ShoeB() { cout << "~ShoeB()" << endl; };
+		virtual void UseProduct()
+		{
+			cout << "i am shoe B ----- product." << endl;
+		};
 	};
 
 	class ShoeFactory : public IFactory
@@ -42,20 +60,22 @@ namespace cxgc
 	public:
 		ShoeFactory() { cout << "ShoeFactory()" << endl; };
 		virtual ~ShoeFactory() { cout << "~ShoeFactory()" << endl; };
-		virtual IProduct* CreateProduct()
-		{
-			return new Shoe();
-		};
+		virtual IProductA* CreateProductA(){ return new ShoeA();};
+		virtual IProductB* CreateProductB() { return new ShoeB(); };
 	};
-
 
 	void test_cxgc()
 	{
 		std::cout << "\n----抽象工厂模式----\n";
 		IFactory* pFactory = new ShoeFactory();
-		IProduct* pProduct = pFactory->CreateProduct();
-		pProduct->UseProduct();
-		delete pProduct;
+		IProductA* pProductA = pFactory->CreateProductA();
+		pProductA->UseProduct();
+		
+		IProductB* pProductB = pFactory->CreateProductB();
+		pProductB->UseProduct();
+		
+		delete pProductA;
+		delete pProductB;
 		delete pFactory;
 	}
 
