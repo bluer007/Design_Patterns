@@ -1,56 +1,62 @@
-ï»¿/*  
-*   éŽ¶å€Ÿè–„å®¸ãƒ¥å·¶å¦¯â€³ç´¡
+/*
+*   ³éÏó¹¤³§Ä£Ê½	Ô´ÎÄ¼þ
 */
 
 #include <iostream>
+#include "³éÏó¹¤³§Ä£Ê½.h"
 using namespace std;
 
-class IProduct
+namespace cxgc
 {
-public:
-	virtual ~IProduct() = 0;	//å£°æ˜Žä¸ºçº¯è™šå‡½æ•°
-	virtual void UseProduct() = 0;
-};
-IProduct::~IProduct() { cout << "~IProduct()\n"; };		//å¿…é¡»å†™å‡½æ•°ä½“æ‰èƒ½ç¼–è¯‘
 
-class IFactory
-{
-public:
-    virtual IProduct* CreateProduct() = 0;
-	virtual ~IFactory(){ cout << "~IFactory()\n"; };
-};
 
-class Shoe : public IProduct
-{
-public:
-	Shoe() { cout << "Shoe()" << endl; };
-	virtual ~Shoe() { cout << "~Shoe()" << endl; };
-	virtual void UseProduct()
+	class IProduct
 	{
-		cout << "i am shoe -- product." << endl;
+	public:
+		virtual ~IProduct() = 0;	//ÉùÃ÷Îª´¿Ðéº¯Êý
+		virtual void UseProduct() = 0;
+	};
+	IProduct::~IProduct() { cout << "~IProduct()\n"; };		//±ØÐëÐ´º¯ÊýÌå²ÅÄÜ±àÒë
+
+	class IFactory
+	{
+	public:
+		virtual IProduct* CreateProduct() = 0;
+		virtual ~IFactory() { cout << "~IFactory()\n"; };
 	};
 
+	class Shoe : public IProduct
+	{
+	public:
+		Shoe() { cout << "Shoe()" << endl; };
+		virtual ~Shoe() { cout << "~Shoe()" << endl; };
+		virtual void UseProduct()
+		{
+			cout << "i am shoe -- product." << endl;
+		};
+
+	};
+
+	class ShoeFactory : public IFactory
+	{
+	public:
+		ShoeFactory() { cout << "ShoeFactory()" << endl; };
+		virtual ~ShoeFactory() { cout << "~ShoeFactory()" << endl; };
+		virtual IProduct* CreateProduct()
+		{
+			return new Shoe();
+		};
+	};
+
+
+	void test_cxgc()
+	{
+		std::cout << "\n----³éÏó¹¤³§Ä£Ê½----\n";
+		IFactory* pFactory = new ShoeFactory();
+		IProduct* pProduct = pFactory->CreateProduct();
+		pProduct->UseProduct();
+		delete pProduct;
+		delete pFactory;
+	}
+
 };
-
-class ShoeFactory : public IFactory
-{
-public:
-	ShoeFactory() { cout << "ShoeFactory()" << endl; };
-	virtual ~ShoeFactory() { cout << "~ShoeFactory()" << endl; };
-    virtual IProduct* CreateProduct()
-    {
-		return new Shoe();
-    };
-};
-
-
-void test_ChouXiangGongChang()
-{
-	std::cout << "\n----æŠ½è±¡å·¥åŽ‚æ¨¡å¼----\n";
-	IFactory* pFactory = new ShoeFactory();
-	IProduct* pProduct = pFactory->CreateProduct();
-	pProduct->UseProduct();
-	delete pProduct;
-	delete pFactory;
-}
-

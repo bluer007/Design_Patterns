@@ -121,7 +121,13 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="抽象工厂模式.cpp" />
+    <ClCompile Include="简单工厂模式.cpp" />
     <ClCompile Include="装饰器模式.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="抽象工厂模式.h" />
+    <ClInclude Include="简单工厂模式.h" />
+    <ClInclude Include="装饰器模式.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

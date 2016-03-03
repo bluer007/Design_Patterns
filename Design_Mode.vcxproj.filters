@@ -15,14 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="装饰器模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="装饰器模式.cpp">
+    <ClCompile Include="简单工厂模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="抽象工厂模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="简单工厂模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="抽象工厂模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="装饰器模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
