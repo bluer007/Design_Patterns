@@ -30,6 +30,9 @@
     <ClCompile Include="工厂方法模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="建造者模式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="简单工厂模式.h">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="工厂方法模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="建造者模式.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
