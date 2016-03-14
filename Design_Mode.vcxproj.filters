@@ -33,6 +33,12 @@
     <ClCompile Include="建造者模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="原型模式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="单例模式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="简单工厂模式.h">
@@ -48,6 +54,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="建造者模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="原型模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="单例模式.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

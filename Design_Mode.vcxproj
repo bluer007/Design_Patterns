@@ -120,6 +120,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="单例模式.cpp" />
+    <ClCompile Include="原型模式.cpp" />
     <ClCompile Include="工厂方法模式.cpp" />
     <ClCompile Include="建造者模式.cpp" />
     <ClCompile Include="抽象工厂模式.cpp" />
@@ -127,6 +129,8 @@
     <ClCompile Include="装饰器模式.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="单例模式.h" />
+    <ClInclude Include="原型模式.h" />
     <ClInclude Include="工厂方法模式.h" />
     <ClInclude Include="建造者模式.h" />
     <ClInclude Include="抽象工厂模式.h" />
