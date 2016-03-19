@@ -39,6 +39,9 @@
     <ClCompile Include="单例模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="适配器模式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="简单工厂模式.h">
@@ -62,5 +65,13 @@
     <ClInclude Include="单例模式.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="适配器模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

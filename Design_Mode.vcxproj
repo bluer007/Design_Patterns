@@ -127,6 +127,7 @@
     <ClCompile Include="抽象工厂模式.cpp" />
     <ClCompile Include="简单工厂模式.cpp" />
     <ClCompile Include="装饰器模式.cpp" />
+    <ClCompile Include="适配器模式.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="单例模式.h" />
@@ -136,6 +137,10 @@
     <ClInclude Include="抽象工厂模式.h" />
     <ClInclude Include="简单工厂模式.h" />
     <ClInclude Include="装饰器模式.h" />
+    <ClInclude Include="适配器模式.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

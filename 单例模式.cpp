@@ -117,14 +117,14 @@ namespace dl
 
 			~GC() 
 			{ 
-				cout << "单例模式中清理实例和其他对象 ~GC() -- Began to clean up\n"; 
+				//cout << "单例模式中清理实例和其他对象 ~GC() -- Began to clean up\n"; 
 				//delete m_file;	销毁除实例外的其他对象资源
 				if (m_instance)
 				{
 					delete m_instance;	//通过GC类的析构函数销毁实例
 					m_instance = nullptr;
+					system("pause");
 				}
-				system("pause");
 			};
 		};
 
