@@ -13,6 +13,7 @@
 #include "单例模式.h"
 #include "适配器模式.h"
 #include "桥接模式.h"
+#include "组合模式.h"
 
 using namespace std;
 
@@ -25,6 +26,7 @@ using yx::test_yx;			//原型模式
 using dl::test_dl;			//单例模式
 using spq::test_spq;		//适配器模式
 using qj::test_qj;			//桥接模式
+using zh::test_zh;			//组合模式
 
 enum
 {
@@ -36,7 +38,8 @@ enum
 	YX,			//原型模式
 	DL,			//单例模式
 	SPQ,		//适配器模式
-	QJ			//桥接模式
+	QJ,			//桥接模式
+	ZH			//组合模式
 };
 
 int main()
@@ -54,6 +57,7 @@ int main()
 		cout << "[7] 单例模式\n";
 		cout << "[8] 适配器模式\n";
 		cout << "[9] 桥接模式\n";
+		cout << "[10] 组合模式\n";
 
 		cin.getline(choose, 3);
 		if (choose[0] == 'q' || choose[0] == 'Q')
@@ -78,6 +82,8 @@ int main()
 			test_spq();		break;	//适配器模式
 		case QJ:
 			test_qj();		break;	//桥接模式
+		case ZH:
+			test_zh();		break;	//组合模式
 		default:
 			cout << "\nPlease choose a valid number.\n";	break;
 		}

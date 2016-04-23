@@ -45,6 +45,9 @@
     <ClCompile Include="桥接模式.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="组合模式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="简单工厂模式.h">
@@ -72,6 +75,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="桥接模式.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="组合模式.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

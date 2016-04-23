@@ -49,9 +49,10 @@ namespace qj
 
 	void test_qj()
 	{
+		cout << "\n----桥接模式----" << endl;
 		Product* product = new Clothes();
 		Person* person = new Bluer(product);
-		person->DoSomething();
+		person->DoSomething();		//实际上调用了Product类的接口
 
 		delete product;
 		delete person;

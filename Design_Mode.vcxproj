@@ -127,6 +127,7 @@
     <ClCompile Include="抽象工厂模式.cpp" />
     <ClCompile Include="桥接模式.cpp" />
     <ClCompile Include="简单工厂模式.cpp" />
+    <ClCompile Include="组合模式.cpp" />
     <ClCompile Include="装饰器模式.cpp" />
     <ClCompile Include="适配器模式.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="抽象工厂模式.h" />
     <ClInclude Include="桥接模式.h" />
     <ClInclude Include="简单工厂模式.h" />
+    <ClInclude Include="组合模式.h" />
     <ClInclude Include="装饰器模式.h" />
     <ClInclude Include="适配器模式.h" />
   </ItemGroup>
