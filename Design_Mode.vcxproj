@@ -120,6 +120,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="享元模式.cpp" />
     <ClCompile Include="单例模式.cpp" />
     <ClCompile Include="原型模式.cpp" />
     <ClCompile Include="外观模式.cpp" />
@@ -133,6 +134,7 @@
     <ClCompile Include="适配器模式.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="享元模式.h" />
     <ClInclude Include="单例模式.h" />
     <ClInclude Include="原型模式.h" />
     <ClInclude Include="外观模式.h" />
